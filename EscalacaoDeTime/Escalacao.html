@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>Select Your Team</title>
+		<script src="Escalacao.js"></script>
+		<style type="text/css">
+			*{font-family: Arial, Helvetica, sans-serif; color: #fff;}
+			body{background-color: #081016;} 
+			.escalacao{display: flex; align-items: center; justify-content: space-around;} 
+			.formulario{display: flex; justify-content: space-around; align-items: center;} 
+			.formulario > form{display: flex; gap: 150px; flex-wrap: wrap;}
+			button {background-color: #000; border: 2; border-radius: 100px; border-color: #fff;}
+			button:hover{scale: 1.1; cursor: pointer; background-color: #fff; border-color: #000; color: #000;}
+		</style>
+	</head>
+	<body>
+		<center><h1>SELECT YOUR TEAM HERE!</h1></center>
+		<hr>
+		<h1>Select ur players</h1>
+		<div class="escalacao">
+			<p>NAME</p><p>POSITION</p><p>T-SHIRT NUMBER</p>
+		</div>
+		<div class="formulario">
+			<form action="">
+				<input type="text" id="name" size="29" placeholder="Player Name Here">
+				<input type="text" id="position" size="29" placeholder="Player Position Here">
+				<input type="number" id="number" size="29" placeholder="Player Number Here">
+			</form>
+		</div>
+		<center><button onclick="createPlayer()">Select</button></center>
+		<hr>
+		<h1>Ur selected team</h1>
+		<div class="escalacao">
+			<p>NAME</p><p>POSITION</p><p>T-SHIRT NUMBER</p>
+		</div>
+		<div class="escalacao" id="dataReception">
+			
+		</div>
+		<hr>
+	</body>
+</html>
