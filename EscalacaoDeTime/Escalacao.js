@@ -23,3 +23,9 @@ function createPlayer(){
     newP.innerText = inputNumber.value;
     divDataReception.appendChild(newP2);
 };
+
+// removendo o jogador
+function removePlayer(){
+    const divDataReception = document.getElementById('dataReception');
+    console.log(divDataReception);
+};
