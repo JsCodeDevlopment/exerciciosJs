@@ -10,10 +10,10 @@ function createPlayer(){
     const inputNumber = document.getElementById('number');
 // criação dos elementos.
     const newP = document.createElement('p');
-    newP.className = inputName.value;
+    newP.className = inputNumber.value;
     newP.innerText = inputName.value;
     const newP1 = document.createElement('p');
-    newP1.className = inputPosition.value;
+    newP1.className = inputNumber.value;
     newP1.innerText = inputPosition.value;
     const newP2 = document.createElement('p');
     newP2.className = inputNumber.value;
@@ -32,18 +32,13 @@ function createPlayer(){
 function removePlayer(){
 // entrada dos dados.
     const divDataReception = document.getElementById('dataReception');
-    const inputNumberToRemove = document.getElementById('delet');
-    const pTags = divDataReception.querySelectorAll('p');
+    const inputNumberToRemove = document.getElementById('delet').value;
+    const pTags = divDataReception.getElementsByClassName(inputNumberToRemove);
 // procura pelo n° informado no input, para apagar o jogador.
 // o if irá questionar o usuário se realmente deseja excluir o jogador.
-    if (confirm("Você tem certeza que deseja deletar o jogador?")) {
-        pTags.forEach(function(p) {
-            if (p.value == inputNumberToRemove) {
-                p.remove();
-            }
-        });
-        
-    }
+    divDataReception.removeChild(pTags.slice());
+
+
 // apagando o conteúdo escrito no input.
     inputNumberToRemove.value = "";
 };
