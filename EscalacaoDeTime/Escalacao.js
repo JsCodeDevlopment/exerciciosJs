@@ -33,5 +33,5 @@ function createPlayer(){
 // removendo o jogador
 function removePlayer(){
     const divDataReception = document.getElementById('dataReception');
-    console.log(divDataReception);
+    const inputNumberToRemove = document.getElementById('delet');
 };
