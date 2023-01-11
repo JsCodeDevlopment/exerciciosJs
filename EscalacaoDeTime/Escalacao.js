@@ -10,10 +10,18 @@ function createPlayer(){
     const inputNumber = document.getElementById('number');
 // criação dos elementos.
     const newP = document.createElement('p');
-    newP.className = 'player';
-    newP.innerText = inputName.value + " - " + inputPosition.value + " - " + inputNumber.value;
+    newP.className = inputName.value;
+    newP.innerText = inputName.value;
+    const newP1 = document.createElement('p');
+    newP1.className = inputPosition.value;
+    newP1.innerText = inputPosition.value;
+    const newP2 = document.createElement('p');
+    newP2.className = inputNumber.value;
+    newP2.innerText = inputNumber.value;
 // atribuição da filiação.
     divDataReception.appendChild(newP);
+    divDataReception.appendChild(newP1);
+    divDataReception.appendChild(newP2);
 // apagando o conteúdo escrito no input.
     inputName.value = "";
     inputPosition.value = "";
