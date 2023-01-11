@@ -4,8 +4,9 @@
 		<script src="Escalacao.js"></script>
 		<style type="text/css">
 			*{font-family: Arial, Helvetica, sans-serif; color: #fff;}
+			input{color: #000;}
 			body{background-color: #081016;} 
-			.escalacao{display: flex; align-items: center; justify-content: space-around;} 
+			.escalacao{display: flex; align-items: center; justify-content: space-around;}
 			.formulario{display: flex; justify-content: space-around; align-items: center;} 
 			.formulario > form{display: flex; gap: 150px; flex-wrap: wrap;}
 			button {background-color: #000; border: 2; border-radius: 100px; border-color: #fff;}
@@ -26,13 +27,13 @@
 				<input type="number" id="number" size="29" placeholder="Player Number Here">
 			</form>
 		</div>
-		<center><button onclick="createPlayer()">Select</button></center>
+		<center><button id="send" onclick="createPlayer()">Select</button></center>
 		<hr>
 		<h1>Ur selected team</h1>
-		<div class="escalacao">
+		<div class="escalados">
 			<p>NAME</p><p>POSITION</p><p>T-SHIRT NUMBER</p>
 		</div>
-		<div class="escalacao" id="dataReception">
+		<div class="escalados" id="dataReception">
 			
 		</div>
 		<hr>
