@@ -30,7 +30,7 @@ function removePlayer(){
 // o if irá questionar o usuário se realmente deseja excluir o jogador.
     if (confirm("Você tem certeza que deseja deletar o jogador?")) {
         pTags.forEach(function(p) {
-            if (p.value = inputNumberToRemove) {
+            if (p.value == inputNumberToRemove) {
                 p.remove();
             }
         });
