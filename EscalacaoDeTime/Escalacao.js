@@ -14,14 +14,15 @@ function createPlayer(){
     divDataReception.appendChild(newP);
 
     const newP1 = document.createElement('p');
-    newP.className = 'position';
-    newP.innerText = inputPosition.value;
+    newP1.className = 'position';
+    newP1.innerText = inputPosition.value;
     divDataReception.appendChild(newP1);
 
     const newP2 = document.createElement('p');
-    newP.className = 'number';
-    newP.innerText = inputNumber.value;
+    newP2.className = 'number';
+    newP2.innerText = inputNumber.value;
     divDataReception.appendChild(newP2);
+    
 };
 
 // removendo o jogador
