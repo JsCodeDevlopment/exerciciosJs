@@ -1,6 +1,5 @@
 // inicialização Boas Vindas.
 let welcome = alert("WELCOME GUY!\n" + "Here \you'll\ select u team.\n" + "\Let´s\ Go?!");
-
 // criando o jogador.
 function createPlayer(){
 // entrada dos dados.
@@ -27,7 +26,6 @@ function createPlayer(){
     inputPosition.value = "";
     inputNumber.value = "";
 };
-
 // removendo o jogador.
 function removePlayer(){
 // entrada dos dados.
@@ -35,11 +33,10 @@ function removePlayer(){
     const inputNumberToRemove = document.getElementById('delet').value;
     const pTags = divDataReception.getElementsByClassName(inputNumberToRemove);
 // procura pelo n° informado no input, para apagar o jogador.
-// o if irá questionar o usuário se realmente deseja excluir o jogador.
-
-divDataReception.removeChild(pTags[0]);
-
-
+// essa estrutura de repetição irá apagar cada "p" que esteja relacionado ao player informado.
+for (let i = 3; i <= pTags.length; i--) { 
+    divDataReception.removeChild(pTags[0]);
+  }
 // apagando o conteúdo escrito no input.
-    inputNumberToRemove.value = "";
+inputNumberToRemove.value = "";
 };
