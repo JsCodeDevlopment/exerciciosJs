@@ -36,7 +36,8 @@ function removePlayer(){
     const pTags = divDataReception.getElementsByClassName(inputNumberToRemove);
 // procura pelo n° informado no input, para apagar o jogador.
 // o if irá questionar o usuário se realmente deseja excluir o jogador.
-    divDataReception.removeChild(pTags.slice());
+
+divDataReception.removeChild(pTags[0]);
 
 
 // apagando o conteúdo escrito no input.
