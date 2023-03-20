@@ -1,13 +1,41 @@
-import { calc } from "./Modules/calc.js";
-import { titulo, inputPeso, inputAltura, buttonSend } from "./Modules/elements.js";
+import { calculoDoImc, estadoImc } from "./Modules/calc.js";
+import { createResultElement } from "./Modules/elements.js";
 
-export const tela = document.querySelector("#root");
+const resultsContainer = document.querySelector("#results");
 
-function render() {
-  tela.append(titulo("Calculando IMC", "title"));
-  tela.append(inputPeso("number", "peso"))
-  tela.append(inputAltura("number", "altura"))
-  tela.append(buttonSend("sendButton", "Calcular"))
+const button = document.querySelector("#sendButton");
+const inputPeso = document.querySelector("#peso");
+const inputAltura = document.querySelector("#altura");
+const title = document.querySelector("#title");
+
+function resetInput() {
+  inputPeso.value = "";
+  inputAltura.value = "";
 }
-render();
-calc()
+
+button.addEventListener("click", () => {
+  title.innerText = "Calculando IMC...";
+  resultsContainer.innerHTML = "";
+
+  if (inputPeso.value === "" || inputAltura.value === "") {
+    alert("Preencha os campos");
+    resetInput();
+    return;
+  }
+
+  calculoDoImc(inputPeso.valueAsNumber, inputAltura.valueAsNumber)
+    .then((imc) => {
+      const imcResultElement = createResultElement("span", imc.toFixed(1));
+      const stateImcResultElement = createResultElement(
+        undefined,
+        estadoImc(imc)
+      );
+      resultsContainer.append(imcResultElement, stateImcResultElement);
+    })
+    .catch(console.error)
+    .finally(() => {
+      title.innerText = "IMC Calculado!";
+    });
+
+  resetInput();
+});

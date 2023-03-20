@@ -38,3 +38,9 @@
 #sendButton:hover{
     transform: scale(1.1);
 }
+#results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}

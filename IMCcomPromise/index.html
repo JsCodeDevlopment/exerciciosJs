@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
     <script src="index.js" defer type="module"></script>
     <title>IMC</title>
-</head>
-<body>
-    <div id="viewport"><div id="root"></div></div>
-</body>
+  </head>
+  <body>
+    <div id="viewport">
+      <div id="root">
+        <h1 id="title">Calculando IMC...</h1>
+        <input id="peso" type="number" placeholder="Seu Peso"/>
+        <input id="altura" type="number" placeholder="Sua Altura" />
+        <button id="sendButton">Calcular</button>
+        <div id="results">
+          
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
