@@ -30,9 +30,34 @@ export function buttonSend(id, text) {
   return button;
 }
 
-export function resultadoDaMedida(value){
-  const mensagem = document.createElement("p")
-  mensagem.innerText = value
-  tela.append(mensagem)
-  return mensagem
+export function calculoDoImc(peso, altura, id) {
+  const resultado = peso / (altura * altura);
+
+  if (!document.querySelector("#result")) {
+    const result = document.createElement("h1");
+    result.innerText = resultado.toFixed(1);
+    result.id = id;
+    result.innerText = resultado.toFixed(1);
+    tela.append(result);
+    console.log("caiu no if");
+    return result;
+  } else {
+    const toRemove = document.querySelector("#result");
+    tela.removeChild(toRemove);
+    console.log("caiu no else");
+  }
+
+  return resultado;
+}
+
+export function resultadoDaMedida(value) {
+  if (!document.querySelector("p")) {
+    const mensagem = document.createElement("p");
+    mensagem.innerText = value;
+    tela.append(mensagem);
+    return mensagem;
+  } else {
+    const toRemoveToo = document.querySelector("p");
+    tela.removeChild(toRemoveToo);
+  }
 }

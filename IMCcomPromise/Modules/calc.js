@@ -1,4 +1,4 @@
-import { tela } from "../index.js";
+import { calculoDoImc } from "./elements.js";
 import { dados } from "./resultDados.js";
 
 export function calc() {
@@ -22,19 +22,5 @@ export function calc() {
     calculoDoImc(inputPeso.value, inputAltura.value, "result");
     resetInput();
     dados()
-
-
   });
-}
-
-function calculoDoImc(peso, altura, id) {
-  const resultado = peso / (altura * altura);
-
-  
-
-  const result = document.createElement("h1");
-  result.innerText = resultado.toFixed(1);
-  result.id = id;
-  tela.append(result)
-  return resultado;
 }
