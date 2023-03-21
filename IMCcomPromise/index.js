@@ -14,7 +14,7 @@ function resetInput() {
 }
 
 button.addEventListener("click", () => {
-  title.innerText = "Calculando IMC...";
+  title.innerText = "Calculando...";
   resultsContainer.innerHTML = "";
 
   if (inputPeso.value === "" || inputAltura.value === "") {

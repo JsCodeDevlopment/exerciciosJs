@@ -4,6 +4,7 @@
     --cor-primaria: #525252;
     --cor-secundaria: #000;
     --cor-text: #e6ddbc;
+    --cor-button: #2a2829;
     font-size: 65.5%;
 }
 #viewport{
@@ -24,6 +25,7 @@
     justify-content: center;
     gap: 1rem;
     border-radius: 2rem;
+    border: 0.3rem solid var(--cor-text);
 }
 #peso{
     color: var(--cor-secundaria);
@@ -32,8 +34,11 @@
     color: var(--cor-secundaria);
 }
 #sendButton{
+    background-color: var(--cor-text);
     color: var(--cor-secundaria);
     cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
 }
 #sendButton:hover{
     transform: scale(1.1);
@@ -43,4 +48,16 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    background-color: var(--cor-text);
+    width: 16rem;
+    border-radius: 0.4rem;
+}
+span{
+    font-size: 3rem;
+    color: var(--cor-secundaria);
+}
+
+strong{
+    font-size: 1.3rem;
+    color: var(--cor-secundaria);
 }
